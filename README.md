@@ -6,6 +6,7 @@
 
 ## Usage
 
+- After cloning, run `git clone https://github.com/asdf-vm/asdf.git vm-config/asdf --branch v0.11.3` from the root of the repo
 - Run `vagrant up` and wait for the VM to boot (`apt` and other things will run)
 - Run `vagrant ssh` to access the VM
   - The first time you connect to the VM, run `install-ruby.sh` to get Ruby all set up.
@@ -20,10 +21,6 @@ box because I got tired of messing with `config.vm.provisioner`.  I'm sure the
 use of `privileged: false` would help in some way but `asdf` was just generally
 not visible without an interactive login shell.
 
-Yes, I know asdf is included as a git repo in a detached head state.  No, it's
-not intended to be a submodule.  I needed a VM pretty quick and I'll figure out
-a cleaner way to handle that in the future.
-
 ## Laundry List
 
 - Come up with a better Ruby installation method... perhaps some Ansible voodoo
@@ -31,4 +28,4 @@ a cleaner way to handle that in the future.
 - Include htop or glances
 - Include `gem_home` or something similar
 - Set up port forwarding
-- Clean up included asdf repo
+- Find a cleaner way to include asdf
